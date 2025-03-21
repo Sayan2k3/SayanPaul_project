@@ -14,3 +14,9 @@ Frontend: HTML5, CSS3, JavaScript ES6
 Data Visualization: Chart.js
 Cloud Hosting: AWS S3 (Static Website)
 Data Format: JSON
+
+
+
+https://github.com/user-attachments/assets/13089e19-97b7-47eb-99be-7f489705d977
+
+
