@@ -1,0 +1,9 @@
+{
+  "trafficLevel": "Moderate",
+  "accidents": 2,
+  "congestion": "City Center Avenue",
+  "updatedAt": "2025-03-21 22:30",
+  "intensity": [60, 45, 80, 35],
+  "alternateRoute": "Green Park Road",
+  "highTrafficTime": "Evening"
+}
