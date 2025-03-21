@@ -1,3 +1,5 @@
+SAYAN PAUL -36 - CSBS - 3rd Year
+
 🌐 Cloud-based Smart Traffic Management System
 This project is a modern web-based solution designed to monitor, analyze, and manage traffic conditions in real-time using cloud-hosted data. Built with a combination of HTML, CSS, and JavaScript, the system leverages AWS S3 Static Website Hosting to deliver a seamless and responsive user experience.
 
