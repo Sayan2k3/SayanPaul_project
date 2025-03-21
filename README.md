@@ -1,5 +1,7 @@
 SAYAN PAUL -36 - CSBS - 3rd Year
 
+https://github.com/user-attachments/assets/13089e19-97b7-47eb-99be-7f489705d977
+
 🌐 Cloud-based Smart Traffic Management System
 This project is a modern web-based solution designed to monitor, analyze, and manage traffic conditions in real-time using cloud-hosted data. Built with a combination of HTML, CSS, and JavaScript, the system leverages AWS S3 Static Website Hosting to deliver a seamless and responsive user experience.
 
@@ -15,8 +17,5 @@ Data Visualization: Chart.js
 Cloud Hosting: AWS S3 (Static Website)
 Data Format: JSON
 
-
-
-https://github.com/user-attachments/assets/13089e19-97b7-47eb-99be-7f489705d977
 
 
