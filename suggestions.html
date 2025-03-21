@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suggestions</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container glass">
+    <h1>💡 Smart Traffic Suggestions</h1>
+    <div id="suggestion-box" class="data-card"></div>
+  </div>
+
+  <script>
+    const s3URL = "https://your-s3-bucket.s3.amazonaws.com/traffic-data.json";
+    async function generateSuggestion() {
+      const res = await fetch(s3URL);
+      const data = await res.json();
+      const suggestions = [
+        `Avoid ${data.congestion} area during peak hours.`,
+        `Try alternate routes via ${data.alternateRoute}.`,
+        `Use public transport today — traffic level is ${data.trafficLevel}.`,
+        `Reduce driving during ${data.highTrafficTime}.`
+      ];
+      const rand = suggestions[Math.floor(Math.random() * suggestions.length)];
+      document.getElementById('suggestion-box').innerHTML = `<p>${rand}</p>`;
+    }
+    setInterval(generateSuggestion, 5000);
+    generateSuggestion();
+  </script>
+</body>
+</html>

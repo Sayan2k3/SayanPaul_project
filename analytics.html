@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container glass">
+    <h1>📊 Traffic Analytics</h1>
+    <canvas id="chartCanvas"></canvas>
+  </div>
+
+  <script>
+    const s3URL = "https://your-s3-bucket.s3.amazonaws.com/traffic-data.json";
+    async function plotChart() {
+      const res = await fetch(s3URL);
+      const data = await res.json();
+      const chart = new Chart(document.getElementById('chartCanvas'), {
+        type: 'bar',
+        data: {
+          labels: ['Morning', 'Noon', 'Evening', 'Night'],
+          datasets: [{
+            label: 'Traffic Intensity',
+            data: data.intensity,
+            backgroundColor: ['#ff6b6b','#ffa502','#1e90ff','#2ed573'],
+            borderRadius: 8
+          }]
+        }
+      });
+    }
+    plotChart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-Time Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="container glass">
+    <h1>📡 Real-Time Dashboard</h1>
+    <div id="realtime-data" class="data-card"></div>
+  </div>
+
+  <script>
+    const s3URL = "https://your-s3-bucket.s3.amazonaws.com/traffic-data.json";
+    function fetchTrafficData() {
+      fetch(s3URL)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('realtime-data').innerHTML = `
+            <p>🚗 Traffic Level: <b>${data.trafficLevel}</b></p>
+            <p>⚠️ Accidents: <b>${data.accidents}</b></p>
+            <p>🚧 Congestion: <b>${data.congestion}</b></p>
+            <p>🕒 Last Updated: <b>${data.updatedAt}</b></p>
+          `;
+        });
+    }
+    setInterval(fetchTrafficData, 4000);
+    fetchTrafficData();
+  </script>
+</body>
+</html>
